@@ -9,22 +9,20 @@ instructions:
 
 download whatever discord channels you want as csv and combine them to one file
 
-(in R:)
+in R:
 
 ```data = read.csv("file.csv", header=TRUE)
 
-out = data[[4]][c(dat[[2]]=="username#0000")]   #insert the username there, or just do data[[4]] if you want it to do all messages
+out = data[[4]][c(dat[[2]]=="username#0000")]           #insert the username there, or just do data[[4]] if you want it to do all messages
 
-write(paste(out, ".", sep=""), file="data.txt")  #markovify only counts the end of a sentence as wherever there is punctuation, not the end of a line, theres probably a better fix for this but it works for now
+write(paste(out, ".", sep=""), file="data.txt")         #markovify only counts the end of a sentence as wherever there is punctuation, not the end of a line, theres probably a better fix for this but it works for now
 ```
 (in python:)
 
 ```import markovify
 
 with open("data.txt") as f:
-
     text = f.read()
-
 text_model = markovify.Text(text)
 ```
 all set up now, do
