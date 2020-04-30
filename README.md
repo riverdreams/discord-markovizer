@@ -17,7 +17,7 @@ out = data[[4]][c(dat[[2]]=="username#0000")]           #insert the username the
 
 write(paste(out, ".", sep=""), file="data.txt")         #markovify only counts the end of a sentence as wherever there is punctuation, not the end of a line, theres probably a better fix for this but it works for now
 ```
-(in python:)
+in python:
 
 ```import markovify
 
